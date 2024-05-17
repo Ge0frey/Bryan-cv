@@ -32,7 +32,7 @@ a:hover {
 }
 
 section {
-    padding-top: 80px;
+    width: 100%;
     height: 100vh;
 }
 
@@ -47,7 +47,6 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 .logo-name {
@@ -71,47 +70,37 @@ section {
     display: flex;
     flex: 2;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .navbar-contents li {
     font-family: "Roboto";
-    border-right: 1px solid black;
-    height: 20px;
-    padding-right: 5px;
     list-style: none;
 }
 
 .home {
-    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-blend-mode: lighten;
     background-image: url(images/Background-image.jpg);
     display: flex;
-    align-items: center;
-    align-content: center;
+    flex-direction: column;
     justify-content: space-between;
 }
 
 .introduction,
 .about {
-    margin: 0 10px 0 10px;
+    margin: 0 10px 5px 10px;
     padding: 10px 10px 0 10px;
     font-family: roboto;
-    position: absolute;
-    border: 1px solid black;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 }
 
 .about {
+    border: 1px solid black;
+    align-self: flex-start;
     line-height: 30px;
-    bottom: 25px;
-    left: 20px;
     width: 410px;
     height: 400px;
-    right: 1050px;
 }
 
 .about-me {
@@ -121,11 +110,11 @@ section {
 }
 
 .introduction {
+    margin-top: 80px;
+    align-self: flex-end;
     width: 230px;
     height: 145px;
     margin-left: 450px;
-    top: 85px;
-    right: 20px;
 }
 
 .greetings {
@@ -162,77 +151,38 @@ section {
 }
 
 .projects {
-    position: relative;
-}
-
-.projects-contents {
+    width: 100%;
     display: flex;
-}
-
-.project-images {
-    position: absolute;
-    width: 60%;
-    height: 100%;
-    overflow: hidden;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 43%;
-}
-
-.project-images img {
-    height: 500px;
-    width: 500px;
-    object-fit: cover;
-}
-
-.cancer-cell,
-.cancer-research-illustration {
-    position: absolute;
-    overflow: hidden;
-    border-radius: 15px;
-}
-
-.cancer-cell {
-    left: 2%;
-    top: 20%;
-    bottom: 32%;
-    box-shadow: -3px -3px 3px rgba(0, 0, 0, 0.25);
-}
-
-.cancer-research-illustration {
-    top: 32%;
-    bottom: 0;
-    left: 40%;
-}
-
-.projects {
     background-image: url(images/project2.jpg);
 }
 
-.project-details {
-    position: absolute;
-    top: 20%;
-    bottom: 0.1%;
-    right: 1%;
-    left: 60%;
-    width: 40%;
-    height: 80%;
+.projects-heading {
+    flex: 1;
+}
+
+.project-details{
+    height: 100%;
+    display: grid;
     font-family: roboto;
-    line-height: 30px;
-    font-weight: 500;
-    margin-right: 20px;
+    box-sizing: border-box;
+    overflow: auto;
+    font-weight: 400;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    flex: 1;
 }
 
 .project-details li,
 .experience-details li {
-    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.25);
-    border-radius: 25px;
-    box-sizing: border-box;
-    background-color: lightblue;
-    list-style: none;
     margin: 10px 10px 10px 0;
-    padding: 5px;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    box-sizing: border-box;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    background-color: lightblue;
+    max-width: 100%;
+    list-style: none;
 }
 
 .experience-contents {
@@ -248,9 +198,6 @@ section {
     flex: 1 1 auto;
     background-image: url(images/project1.jpg);
     height: 100%;
-    font-family: roboto;
-    font-weight: 500;
-    line-height: 30px;
     box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 }
