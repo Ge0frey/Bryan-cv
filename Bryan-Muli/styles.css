@@ -180,8 +180,9 @@ section {
     display: flex;
     text-align: center;
     align-items: center;
+    line-height: 25px;
+    font-size: 20px;
     background-color: lightblue;
-    max-width: 100%;
     list-style: none;
 }
 
