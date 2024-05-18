@@ -32,7 +32,6 @@ a:hover {
 }
 
 section {
-    width: 100%;
     height: 100vh;
 }
 
@@ -174,7 +173,7 @@ section {
 .project-details li,
 .experience-details li {
     margin: 10px 10px 10px 0;
-    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.25);
+    border: 1px solid black;
     border-radius: 15px;
     box-sizing: border-box;
     display: flex;
@@ -186,35 +185,51 @@ section {
     list-style: none;
 }
 
-.experience-contents {
+.experience-content {
+    height: 100%;
     display: flex;
-    align-items: center;
+    box-sizing: border-box;
+    justify-content: space-between;
 }
 
 .experience-details {
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 20px;
-    align-content: center;
-    flex: 1 1 auto;
-    background-image: url(images/project1.jpg);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
     height: 100%;
-    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
+    margin-left: 10px;
+    background-size: cover;
+    flex: 1;
 }
 
-.experience-image {
-    margin-top: 50px;
-    margin-right: 10px;
+.experience-details li {
+    box-sizing: border-box;
+    background-color: lightpink;
+    height: 50%;
+    font-family: roboto;
+    box-sizing: border-box;
+    overflow: auto;
+    font-weight: 400;
 }
 
-.experience-image img{
+.experience-image{
+    flex: 1;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    height: 100%; 
+}
+
+.experience-image img {
+    border: 1px solid black;
+    border-radius: 15px;
+    height: 700px;
+    width: 700px;
     object-fit: cover;
-    height: 500px;
-    border-radius: 10px;
 }
 
 .skills {
+    padding-top: 60px;
     font-family: roboto;
     font-weight: 500;
 }
